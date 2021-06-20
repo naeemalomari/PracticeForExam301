@@ -126,94 +126,99 @@
 
 // };
 // Loe.render();
-// let arrOfObjects=[];
-// let table = document.createElement('table');
-// function Players (playerName,goals,nationality,goodWithDefend){
-//   this.playerName=playerName;
-//   this.goals=goals;
-//   this.nationality=nationality;
-//   this.goodWithDefend=goodWithDefend;
-//   arrOfObjects.push(this);
-// }
-
-// Players.prototype.manCity=function(){
-//   console.log(`${this.playerName} defeated them many times`);
-
-// };
-// Players.prototype.Barca=function(){
-//   console.log(`${this.playerName} Scored many goals for barca`);
-// };
-// Players.prototype.Argintina =function(){
-//   console.log(`${this.playerName} scored 80 goals for ${this.nationality}`);
-
-// };
-
-// // let table =document.createElement('table');
-// let section= document.createElement('section');
-// globVar.appendChild(section);
-// let h2El=document.createElement('h2');
-// section.appendChild(h2El);
-// h2El.textContent=this.playerName;
-
-// section.appendChild(table);
-// let firstRow =document.createElement('tr');
-// table.appendChild(firstRow);
-// let th= document.createElement('th');
-// firstRow.appendChild(th);
-// th.textContent=this.goodwithdefend;
-// let th2=document.createElement('th');
-// firstRow.appendChild(th2);
-// th2.textContent=('nationality');
-// let th3=document.createElement('th');
-// firstRow.appendChild(th3);
-// th3.textContent=('goals');
-
-// let secodRow =document.createElement('tr');
-// table.appendChild(secodRow);
-// let td =document.createElement('td');
-// secodRow.appendChild(td);
-// td.textContent=this.nationality;
-// let td2 =document.createElement('td');
-// secodRow.appendChild(td2);
-// td2.textContent=this.goals;
 
 
-// let player1 =new Players ('messi','700','argintina',false);
-// let player2 =new Players ('ronaldo','750','purtogal',false);
-// let player3 =new Players ('neymar','300','brazil',false);
-// console.log(arrOfObjects);
 
-// for (let i=0 ; i<arrOfObjects.length;i++){
-//   arrOfObjects[i].manCity();
-// }
-// console.log(arrOfObjects);
-// // player1.manCity();
-// // player1.Barca();
-// // player1.Argintina();
 
-// // player2.manCity();
-// // player3.manCity();
+let arrOfObjects=[];
+let table = document.createElement('table');
+function Players (playerName,goals,nationality,goodWithDefend){
+  this.playerName=playerName;
+  this.goals=goals;
+  this.nationality=nationality;
+  this.goodWithDefend=goodWithDefend;
+  arrOfObjects.push(this);
+}
 
-// for (let i=0 ; i<arrOfObjects.length;i++){
-//   arrOfObjects[i].Barca();
-// }
+Players.prototype.manCity=function(){
+  console.log(`${this.playerName} defeated them many times`);
 
-// for (let i=0 ; i<arrOfObjects.length;i++){
-//   arrOfObjects[i].Argintina();
-// }
-// const Playersform=document.getElementById('new');
-// Playersform.addEventListener('submit',submiting);
-// function submiting (){
-//   event.preventDefault();
-//   let newName=event.target.Name.value;
-//   let positions=event.target.positions.value;
-//   console.log(positions);
-//   positions=positions.split(',');
-//   console.log(positions);
+};
+Players.prototype.Barca=function(){
+  console.log(`${this.playerName} Scored many goals for barca`);
+};
+Players.prototype.Argintina =function(){
+  console.log(`${this.playerName} scored 80 goals for ${this.nationality}`);
 
-// //   let messi=new Players(newName,positions);
+};
 
-//   let messi = new Players(newName,positions);
+// let table =document.createElement('table');
+let section= document.createElement('section');
+globVar.appendChild(section);
+let h2El=document.createElement('h2');
+section.appendChild(h2El);
+h2El.textContent=this.playerName;
 
-//   messi.render();
-// }
+section.appendChild(table);
+let firstRow =document.createElement('tr');
+table.appendChild(firstRow);
+let th= document.createElement('th');
+firstRow.appendChild(th);
+th.textContent=this.goodwithdefend;
+let th2=document.createElement('th');
+firstRow.appendChild(th2);
+th2.textContent=('nationality');
+let th3=document.createElement('th');
+firstRow.appendChild(th3);
+th3.textContent=('goals');
+
+let secodRow =document.createElement('tr');
+table.appendChild(secodRow);
+let td =document.createElement('td');
+secodRow.appendChild(td);
+td.textContent=this.nationality;
+let td2 =document.createElement('td');
+secodRow.appendChild(td2);
+td2.textContent=this.goals;
+
+
+let player1 =new Players ('messi','700','argintina',false);
+let player2 =new Players ('ronaldo','750','purtogal',false);
+let player3 =new Players ('neymar','300','brazil',false);
+console.log(arrOfObjects);
+
+for (let i=0 ; i<arrOfObjects.length;i++){
+  arrOfObjects[i].manCity();
+}
+console.log(arrOfObjects);
+// player1.manCity();
+// player1.Barca();
+// player1.Argintina();
+
+// player2.manCity();
+// player3.manCity();
+
+for (let i=0 ; i<arrOfObjects.length;i++){
+  arrOfObjects[i].Barca();
+}
+
+for (let i=0 ; i<arrOfObjects.length;i++){
+  arrOfObjects[i].Argintina();
+}
+const Playersform=document.getElementById('new');
+Playersform.addEventListener('submit',submiting);
+function submiting (){
+  event.preventDefault();
+  let newName=event.target.Name.value;
+  let positions=event.target.positions.value;
+  console.log(positions);
+  positions=positions.split(',');
+  console.log(positions);
+
+//   let messi=new Players(newName,positions);
+
+  let messi = new Players(newName,positions);
+
+  messi.render();
+}
+

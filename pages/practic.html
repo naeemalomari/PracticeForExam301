@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+ <html> 
+  <head> 
+  <title> To Do list</title>
+  <link rel="stylesheet" href="../css/practic.css">
+</head>
+     <body>
+         <p>My To Do list</p>
+    <main>
+        <form id="form">
+        <label id="todo" for="todo" > What do you want to do today</label>
+        <input type="text" id="text" name="itemName">
+        <br><br>
+        <label id="category" for="itemcategory"> category</label>
+        <select name="itemcategory" id="">
+        <option value="sleeping">sleeping</option>
+        <option value="studying">studying</option>
+        <option value="working">Working</option>
+        <option value="Evaluating">Evaluating</option>
+        </select>
+        <br><br> 
+        <label id="" for="Quantity" >Hours Quantity</label>
+        <input name="itemQuantity" type="number" id="Quantity"> 
+        <br><br>
+        <button id="submit"> submit </button> 
+        </form>
+    </main> 
+    <div class="list-div content">
+        <table id="todolist-table" class="todo-table">
+
+        </table>
+    </div> 
+<p id="total"> 
+</p>
+  <script src="../js/practic.js"></script>
+    </body>
+</html>
