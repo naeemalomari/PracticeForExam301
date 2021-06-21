@@ -1,3 +1,16 @@
+*{
+
+background-color: pink;
+
+}
+#makeup{
+    box-sizing: border-box;
+height:80px;
+background-color: rgb(175, 95, 133);
+    text-align: center;
+margin: 50px;
+padding:1.75%;
+}
 #form2{
 
 
