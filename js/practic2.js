@@ -3,8 +3,6 @@
 let myForm=document.getElementById('form');
 let ourParentTable=document.getElementById('table');
 let arrOfHeader=['BookName','NumberOfPages', 'Choose'];
-
-
 let arrOfLibrary=[];
 function Library(BookName,NumberOfPages,Choose){
 
@@ -14,7 +12,6 @@ function Library(BookName,NumberOfPages,Choose){
   arrOfLibrary.push(this);
 
 }
-
 Library.prototype.render=function(){
 
   let LibraryFirstRow=document.createElement('tr');
