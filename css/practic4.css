@@ -1,0 +1,13 @@
+#form2{
+
+
+    width: 50%;
+}
+#table{
+
+    box-sizing:border-box; 
+    position: relative;
+    left: 53%;
+    bottom: 300px;
+
+}

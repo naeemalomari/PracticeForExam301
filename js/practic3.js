@@ -58,7 +58,7 @@ function playersItems(){
     ourParentTable.appendChild(playersRow);
 
 
-}
+  }
 
 
 
