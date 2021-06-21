@@ -3,10 +3,12 @@
     margin: 0px;
 background-color: rgb(94, 3, 3);
 color: whitesmoke;
+text-align: center;
 }
 
 #form{
-
+position: relative;
+top: 100px;
     color: whitesmoke;
     
 }
@@ -14,3 +16,11 @@ color: whitesmoke;
     width: 180px;
 
 height: 70px;}
+
+.todo-table{
+    /* text-align: center; */
+    position: relative;
+    left: 200px;
+    top: 170px;
+
+}

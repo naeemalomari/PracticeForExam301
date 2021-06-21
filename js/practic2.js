@@ -35,6 +35,31 @@ Library.prototype.render=function(){
   ourParentTable.appendChild(LibraryFirstRow);
 
 };
+function libraryListItems(){
+
+  for(let j=0 ;j<arrOfLibrary.length;j++){
+
+    let LibraryFirstRow=document.createElement('tr');
+
+    let itemNameTd=document.createElement('td');
+    itemNameTd.textContent=arrOfLibrary[j].BookName;
+
+    let itemNumberTd=document.createElement('td');
+    itemNumberTd.textContent=arrOfLibrary[j].NumberOfPages;
+
+    let chooseTd=document.createElement('td');
+    chooseTd.textContent=arrOfLibrary[j].Choose;
+
+    LibraryFirstRow.appendChild(itemNameTd);
+    LibraryFirstRow.appendChild(itemNumberTd);
+    LibraryFirstRow.appendChild(chooseTd);
+
+    ourParentTable.appendChild(LibraryFirstRow);
+
+
+  }
+}
+
 function handleFormSubmission(event){
   event.preventDefault();
 
@@ -44,7 +69,7 @@ function handleFormSubmission(event){
 
   let newItem = new Library (itemName, itemNumber, choose);
   newItem.render();
-  //   localStorage=
+  localStorage.setItem('libraryList',JSON.stringify(arrOfLibrary));
 }
 function renderHeader(){
 
@@ -59,7 +84,15 @@ function renderHeader(){
   ourParentTable.appendChild(headerRow);
 }
 
+function checkLS(){
 
+  if(localStorage.getItem('libraryList'))
+  {
+    arrOfLibrary=JSON.parse( localStorage.getItem('libraryList'));
+    libraryListItems();
+  }
+}
 
 myForm.addEventListener('submit', handleFormSubmission);
 renderHeader();
+checkLS();
