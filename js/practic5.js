@@ -1,5 +1,5 @@
 let ourForm=document.getElementById('form');
-let arrOfHeader=['favorite','hours','select', 'date'];
+let arrOfHeader=['---favorite---','hours---','select---', 'date---'];
 let ourTable=document.getElementById('table');
 
 
@@ -43,13 +43,10 @@ function handleSubmission(event){
   let date=event.target.date.value;
 
 
-let newSports = new Sports (favorite,hours,select,date)
+  let newSports = new Sports (favorite,hours,select,date);
+  newSports.render();
 
-
-
-Sports.render();
-
-
+  localStorage.setItem('sportsList',JSON.stringify(arrOfSports));
 
 }
 
@@ -66,12 +63,42 @@ function renderHeader(){
   ourTable.appendChild(headerRow);
 }
 
+function renderList(){
+  for(let j=0;j<arrOfSports.length;j++){
+    let firstRow=document.createElement('tr');
+
+    let favorite=document.createElement('td');
+    favorite.textContent=arrOfSports[j].favorite;
+    let hours=document.createElement('td');
+    hours.textContent=arrOfSports[j].hours;
+    let select=document.createElement('td');
+    select.textContent=arrOfSports[j].select;
+    let date=document.createElement('td');
+    date.textContent=arrOfSports[j].date;
+
+    firstRow.appendChild(favorite);
+    firstRow.appendChild(hours);
+    firstRow.appendChild(select);
+    firstRow.appendChild(date);
+
+    ourTable.appendChild(firstRow);
 
 
+  }
+}
 
+function checkLS(){
 
+  if(localStorage.getItem('sportsList')){
+    arrOfSports=JSON.parse(localStorage.getItem('sportsList'));
+
+    renderList();
+
+  }
+}
 
 
 ourForm.addEventListener('submit', handleSubmission);
 
 renderHeader();
+checkLS();
