@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 *{
+font-family: 'Roboto', sans-serif;
 margin:0px;
 padding: 0px;
 background-image: url(https://assets.publishing.service.gov.uk/government/uploads/system/uploads/image_data/file/99799/s960_30_05_20_GovUK2.jpg);
@@ -20,12 +22,9 @@ top: 81px;
 width: 500px;
 }
 #table{
-
 position: relative;
 left: 705px;
-bottom: 218px;
-
-
+bottom: 255px;
 }
 h1{
 /* padding: 100px; */
@@ -35,18 +34,18 @@ left: 40%;
 color:whitesmoke;
 }
 #fav{
-    position: relative;
-    left: 30px;
+position: relative;
+left: 30px;
 }
 #how{
 position: relative;
 left: 30px;
 }
 #what{
-    position: relative;
-    left: 30px;
+position: relative;
+left: 30px;
 }
 #date{
-    position: relative;
-    left: 30px;
+position: relative;
+left: 30px;
 }
