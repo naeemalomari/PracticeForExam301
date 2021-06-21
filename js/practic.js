@@ -31,6 +31,9 @@
 
 // console.log(ArrOfObject);
 
+///////////////////////////////////////////////////////////////////////////////////
+
+
 
 let ourForm =document.getElementById('form');
 let ourParentTable=document.getElementById('todolist-table');
@@ -43,7 +46,6 @@ function TodoFunction(name,category,quantity){
   this.quantity=quantity;
   arrOfTodoList.push(this);
 }
-console.log(arrOfTodoList);
 
 TodoFunction.prototype.renderItem=function(){
 
@@ -81,9 +83,10 @@ function handleFormSubmission(event){
   localStorage.setItem('TodoListItems', JSON.stringify(arrOfTodoList));
 
 }
-
+// i recommend to do it as a table ;
+// doing it as a ordered list is not professional;
 function renderHeader(){
-  checkLS();
+  // checkLS();
   let headerRow=document.createElement('tr');
   for (let index=0;index<headerContentArr.length;index++){
     let th=document.createElement('th');
@@ -108,28 +111,34 @@ function renderTodoListItems(){
     let itemQuantityTd=document.createElement('td');
     itemQuantityTd.textContent=arrOfTodoList[j].quantity;
 
-    let itemPriceTd=document.createElement('td');
-    itemPriceTd.textContent='';
+    // let itemPriceTd=document.createElement('td');
+    // itemPriceTd.textContent='';
 
     todoListRow.appendChild(itemNameTd);
     todoListRow.appendChild(itemcategoryTd);
     todoListRow.appendChild(itemQuantityTd);
-    todoListRow.appendChild(itemPriceTd);
+    // todoListRow.appendChild(itemPriceTd);
 
     ourParentTable.appendChild(todoListRow);
 
   }
 }
+// function checkLS(){
+//   let abd =JSON.parse(localStorage.getItem('TodoListItems'));
+//   if ( abd !== null ){
+//     arrOfTodoList=abd;
+//     console.log(abd);
+//     renderTodoListItems();
+//   }
+// }
 function checkLS(){
-  let abd =JSON.parse(localStorage.getItem('TodoListItems' || '[]'));
-  if ( abd !== null ){
-    arrOfTodoList=abd;
-    console.log(abd);
+  if (localStorage.getItem('TodoListItems')){
+    arrOfTodoList=JSON.parse(localStorage.getItem('TodoListItems'));
     renderTodoListItems();
   }
 }
 ourForm.addEventListener('submit',handleFormSubmission);
 renderHeader();
-// checkLS();
+checkLS();
 ////////////////////////////////////////////////////////////////////////////////
 

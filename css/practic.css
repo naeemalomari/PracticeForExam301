@@ -1,7 +1,7 @@
 *{
     padding: 0px;
     margin: 0px;
-background-color:darkgrey;
+background-color: rgb(94, 3, 3);
 color: whitesmoke;
 }
 
@@ -10,3 +10,7 @@ color: whitesmoke;
     color: whitesmoke;
     
 }
+#submit{
+    width: 180px;
+
+height: 70px;}
